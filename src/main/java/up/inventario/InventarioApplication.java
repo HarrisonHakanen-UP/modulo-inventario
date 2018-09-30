@@ -12,7 +12,7 @@ import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class Inventarioe3Application {
+public class InventarioApplication {
 	
     static final String topicExchangeName = "spring-boot-exchange";
 
@@ -50,6 +50,6 @@ public class Inventarioe3Application {
 	
 
 	public static void main(String[] args) {
-		SpringApplication.run(Inventarioe3Application.class, args);
+		SpringApplication.run(InventarioApplication.class, args);
 	}
 }
