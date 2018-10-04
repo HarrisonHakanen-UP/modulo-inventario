@@ -17,7 +17,7 @@ public class Localizacao {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int LocalizacaoID;
+	private int localizacaoID;
 	
 	@Column(name = "nome", nullable = false)
 	private String nome;
@@ -33,11 +33,11 @@ public class Localizacao {
 	private Date datamodificacao;
 
 	public int getLocalizacaoID() {
-		return LocalizacaoID;
+		return localizacaoID;
 	}
 
 	public void setLocalizacaoID(int localizacaoID) {
-		LocalizacaoID = localizacaoID;
+		localizacaoID = localizacaoID;
 	}
 
 	public String getNome() {

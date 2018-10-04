@@ -3,7 +3,6 @@ package up.inventario.dominio;
 import java.util.Date;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,7 +20,7 @@ public class ProdutoInventario {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int ProdutoID;
+	private int produtoID;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="localizacaoID")
@@ -45,11 +44,11 @@ public class ProdutoInventario {
 	
 	
 	public int getProdutoID() {
-		return ProdutoID;
+		return produtoID;
 	}
 
 	public void setProdutoID(int produtoID) {
-		ProdutoID = produtoID;
+		produtoID = produtoID;
 	}
 
 	public Localizacao getLocalizacaoID() {
@@ -68,13 +67,35 @@ public class ProdutoInventario {
 		this.estante = estante;
 	}
 
+	public int getBin() {
+		return bin;
+	}
+
+	public void setBin(int bin) {
+		this.bin = bin;
+	}
+
+	public String getChave() {
+		return chave;
+	}
+
+	public void setChave(String chave) {
+		this.chave = chave;
+	}
+
+	public Date getDatamodificacao() {
+		return datamodificacao;
+	}
+
+	public void setDatamodificacao(Date datamodificacao) {
+		this.datamodificacao = datamodificacao;
+	}
+
 	public int getQuantidade() {
 		return quantidade;
 	}
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
-	}
-
-	
+	}	
 }

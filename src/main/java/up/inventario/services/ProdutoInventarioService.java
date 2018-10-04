@@ -29,15 +29,29 @@ public class ProdutoInventarioService {
 	LocalizacaoRepository localizacaoRepository;
 	
 	@GetMapping
+	@RequestMapping("/buscarPorNome")
+	public @ResponseBody ProdutoInventario buscarProdutoInventarioPorId(int produtoID) {
+		ProdutoInventario produtoInventario = produtoInventarioRepository.findByProdutoID(produtoID);
+		return produtoInventario;
+	}
+	
+	@GetMapping
 	@RequestMapping("/listar")
 	public @ResponseBody Iterable<ProdutoInventario> listarProdutosInventario() {
 		Iterable<ProdutoInventario> listaProdutosInventario = produtoInventarioRepository.findAll();
 		return listaProdutosInventario;
 	}
 	
+//	@PostMapping
+//	@RequestMapping("/adicionarProduto")
+//	public void adicionarProduto(@RequestBody Produto produto, @RequestBody Localizacao localizacao) {
+//		produtoInventarioRepository.save(produto);
+//		localizacaoRepository.save(localizacao);
+//	}
+	
 	@PostMapping
 	@RequestMapping("/adicionarProduto")
-	public void adicionarProduto(@RequestBody Produto produto, @RequestBody Localizacao localizacao) {
+	public void adicionarProduto(@RequestBody ProdutoInventario produto, @RequestBody Localizacao localizacao) {
 		produtoInventarioRepository.save(produto);
 		localizacaoRepository.save(localizacao);
 	}

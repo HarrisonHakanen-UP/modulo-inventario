@@ -8,4 +8,6 @@ import up.inventario.dominio.Localizacao;
 
 @RepositoryRestResource(collectionResourceRel = "localizacao", path = "localizacao", excerptProjection = Localizacao.class)
 public interface LocalizacaoRepository extends CrudRepository<Localizacao, Long> {
+	
+	Localizacao findByNome(String nome);
 }
