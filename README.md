@@ -1,6 +1,6 @@
 # modulo-inventario
 
-### Rotas Publicas
+### Rotas públicas
 
 1. Servico ProdutoInventario
  - http://localhost:8080/inventario/buscarPorNome 		-> Realiza a busca de um produto pelo nome
@@ -10,7 +10,7 @@
   - http://localhost:8080/localizacao/buscarPorNome		-> Realiza a busca do local onde se encontra determinada peça
   - http://localhost:8080/localizacao/listar		-> Lista todos os locais cadastrados
 
-### Rotas Privadas
+### Rotas privadas
 
 1. Servico ProdutoInventario
   - http://localhost:8080/inventario/adicionarProduto	-> Adiciona um produto ao inventário
