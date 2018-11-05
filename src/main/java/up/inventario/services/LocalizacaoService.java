@@ -12,10 +12,10 @@ import up.inventario.repositiry.ProdutoInventarioRepository;
 @RestController
 @RequestMapping("/localizacao")
 public class LocalizacaoService {
-	
+
 	@Autowired
 	ProdutoInventarioRepository produtoInventarioRepository;
-	
+
 	@Autowired
 	LocalizacaoRepository localizacaoRepository;
 

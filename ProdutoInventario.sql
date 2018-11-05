@@ -1,4 +1,5 @@
-use inventario;
+USE modulo_inventario;
+
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(1,'A',1,408,'{47A24246-6C43-48EB-968F-025738A8A410}','2014-8-8'); 
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(6,'B',5,324,'{D4544D7D-CAF5-46B3-AB22-5718DCC26B5E}','2014-8-8'); 
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(50,'A',5,353,'{BFF7DC60-96A8-43CA-81A7-D6D2ED3000A8}','2014-8-8'); 
@@ -1067,7 +1068,4 @@ INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamo
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(7,'N/A',0,99,'{B859A235-A1CC-48D7-92BB-10D0C2886E4E}','2013-4-30'); 
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(60,'N/A',0,56,'{5021E7EA-CE96-433C-860A-B9E57A45EF03}','2013-4-30'); 
 INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(7,'N/A',0,78,'{61A26DB0-BD17-442B-B119-8E5227811B82}','2013-4-30'); 
-INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(60,'N/A',0,116,'{AFF43C54-AF78-4635-8F8A-733A1FC2D085}','2013-4-30'); 
-
-
-select * from produtoinventario;
+INSERT INTO produtoinventario (localizacaoID,estante,bin,quantidade,chave,datamodificacao) Values(60,'N/A',0,116,'{AFF43C54-AF78-4635-8F8A-733A1FC2D085}','2013-4-30');

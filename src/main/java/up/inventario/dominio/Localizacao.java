@@ -12,22 +12,22 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="localizacao")
+@Table(name = "localizacao")
 public class Localizacao {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int LocalizacaoID;
-	
+
 	@Column(name = "nome", nullable = false)
 	private String nome;
-	
+
 	@Column(name = "taxadecusto", nullable = true)
 	private double taxadecusto;
-	
+
 	@Column(name = "disponibilidade", nullable = true)
 	private int disponibilidade;
-	
+
 	@Temporal(TemporalType.DATE)
 	@Column(name = "datamodificacao", nullable = true)
 	private Date datamodificacao;
@@ -72,5 +72,4 @@ public class Localizacao {
 		this.datamodificacao = datamodificacao;
 	}
 
-		
 }

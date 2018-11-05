@@ -9,7 +9,7 @@ import up.inventario.dominio.ProdutoInventario;
 
 @Configuration
 public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
-	
+
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 		super.configureRepositoryRestConfiguration(config);

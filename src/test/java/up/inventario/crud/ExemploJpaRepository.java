@@ -17,23 +17,24 @@ public class ExemploJpaRepository {
 
 	@Autowired
 	private ProdutoInventarioRepository produtoInventarioRepository;
-	
+
 	/* Métodos JPA Repository */
-	
+
 	@Test
 	public void rodarMetodosJpa() {
 		ProdutoInventario produtoInventario = new ProdutoInventario();
-		
+
 //		produtoInventario.setLocalizacaoID();
 		produtoInventario.setEstante("A");
 		produtoInventario.setQuantidade(3);
 		produtoInventarioRepository.save(produtoInventario);
-		
-		for(ProdutoInventario prodInv: produtoInventarioRepository.findAll()) {
-			System.out.println("\n" + "Prateleira " + produtoInventario.getEstante() + " " + "Quantidade " + produtoInventario.getQuantidade());
+
+		for (ProdutoInventario prodInv : produtoInventarioRepository.findAll()) {
+			System.out.println(
+					"\n" + "Prateleira " + prodInv.getEstante() + " " + "Quantidade " + prodInv.getQuantidade());
 		}
 	}
-	
+
 	@Before
 	@After
 	public void banner() {

@@ -15,24 +15,26 @@ import up.inventario.repositiry.LocalizacaoRepository;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = InventarioApplication.class)
 public class TesteCrud {
-	
+
 	@Autowired
 	LocalizacaoRepository localizacaoRepository;
-	
+
 	@Test
 	public void Crud() {
 		/* Salva nova localização */
-		
+
 		Localizacao localizacao = new Localizacao();
-		
+
 		localizacao.setNome("Tool Crib");
 		localizacao.setTaxadecusto(0.1);
 		localizacao.setDisponibilidade(20);
 		localizacao.setDatamodificacao(new Date());
 		localizacaoRepository.save(localizacao);
-		
-		for (Localizacao local: localizacaoRepository.findAll()) {
-			System.out.println("\n" + "Nome: " + local.getNome() + " " + "Taxa de Custo: " + local.getTaxadecusto() + "Disponibilidade: " + local.getDisponibilidade() + "Data de modificação: " + local.getDatamodificacao());
+
+		for (Localizacao local : localizacaoRepository.findAll()) {
+			System.out.println("\n" + "Nome: " + local.getNome() + " " + "Taxa de Custo: " + local.getTaxadecusto()
+					+ "Disponibilidade: " + local.getDisponibilidade() + "Data de modificação: "
+					+ local.getDatamodificacao());
 		}
 	}
 

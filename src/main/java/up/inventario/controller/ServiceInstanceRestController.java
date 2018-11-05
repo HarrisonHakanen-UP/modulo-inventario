@@ -10,14 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.DiscoveryClient;
 
-
 public class ServiceInstanceRestController {
 	@Autowired
-    private DiscoveryClient discoveryClient;
+	private DiscoveryClient discoveryClient;
 
-    @RequestMapping("/service-instances/{applicationName}")
-    public List<InstanceInfo> serviceInstancesByApplicationName(
-            @PathVariable String applicationName) {
-        return this.discoveryClient.getInstancesById(applicationName);
-    }
+	@RequestMapping("/service-instances/{applicationName}")
+	public List<InstanceInfo> serviceInstancesByApplicationName(@PathVariable String applicationName) {
+		return this.discoveryClient.getInstancesById(applicationName);
+	}
 }

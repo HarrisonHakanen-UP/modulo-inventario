@@ -21,32 +21,33 @@ import up.inventario.repositiry.ProdutoInventarioRepository;
 @Component
 @RequestMapping("/inventario")
 public class ProdutoInventarioService {
-	
+
 	@Autowired
 	ProdutoInventarioRepository produtoInventarioRepository;
-	
+
 	@Autowired
 	LocalizacaoRepository localizacaoRepository;
-	
+
 	@GetMapping
 	@RequestMapping("/listar")
 	public @ResponseBody Iterable<ProdutoInventario> listarProdutosInventario() {
 		Iterable<ProdutoInventario> listaProdutosInventario = produtoInventarioRepository.findAll();
 		return listaProdutosInventario;
 	}
-	
+
 	@PostMapping
 	@RequestMapping("/adicionarProduto")
 	public void adicionarProduto(@RequestBody ProdutoInventario produto, @RequestBody Localizacao localizacao) {
 		produtoInventarioRepository.save(produto);
 		localizacaoRepository.save(localizacao);
 	}
-	
+
 	@DeleteMapping
 	@RequestMapping("/remover/{id}")
-	public ProdutoInventario removerProduto(@RequestBody ProdutoInventario ProdutoID, @RequestBody Localizacao localizacaoID) {
+	public ProdutoInventario removerProduto(@RequestBody ProdutoInventario ProdutoID,
+			@RequestBody Localizacao localizacaoID) {
 		produtoInventarioRepository.delete(ProdutoID);
-		localizacaoRepository.delete(localizacaoID);		
+		localizacaoRepository.delete(localizacaoID);
 		return ProdutoID;
 	}
 }

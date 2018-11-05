@@ -16,34 +16,33 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="produtoinventario")
+@Table(name = "produtoinventario")
 public class ProdutoInventario {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ProdutoID;
-	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="localizacaoID")
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "localizacaoID")
 	private Localizacao localizacaoID;
-	
+
 	@Column(name = "estante", nullable = false)
 	private String estante;
-	
+
 	@Column(name = "bin", nullable = true)
 	private int bin;
-	
+
 	@Column(name = "quantidade", nullable = true)
 	private int quantidade;
 
 	@Column(name = "chave", nullable = true)
 	private String chave;
-	
+
 	@Temporal(TemporalType.DATE)
 	@Column(name = "datamodificacao", nullable = true)
 	private Date datamodificacao;
-	
-	
+
 	public int getProdutoID() {
 		return ProdutoID;
 	}
@@ -76,5 +75,4 @@ public class ProdutoInventario {
 		this.quantidade = quantidade;
 	}
 
-	
 }
